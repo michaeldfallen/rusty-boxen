@@ -24,4 +24,4 @@ git submodule update --init --recursive >/dev/null
 
 echo "Boostrapping puppet..."
 chmod u+x ./bootstrap/puppet-bootstrap/ubuntu.sh
-./bootstrap/puppet-bootstrap/ubuntu.sh
+(./bootstrap/puppet-bootstrap/ubuntu.sh) </dev/null
