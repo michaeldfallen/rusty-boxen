@@ -23,7 +23,7 @@ git reset --quiet --hard origin/master >/dev/null
 git submodule update --init --recursive >/dev/null
 
 echo "Boostrapping puppet..."
-chmod u+x ./bootstrap/puppet-bootstrap/ubuntu.sh
-set -xv
-./bootstrap/puppet-bootstrap/ubuntu.sh
-set +xv
+apt-get install -y puppet >/dev/null
+apt-get install -y rubygems >/dev/null
+gem install --no-ri --no-rdoc rubygems-update
+update_rubygems >/dev/null
