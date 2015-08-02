@@ -16,6 +16,8 @@ if [ ! -d /opt/rusty-boxen ]; then
 fi
 
 cd /opt/rusty-boxen
+
+echo "Updating rusty-boxen..."
 git fetch --quiet >/dev/null
 git pull --quiet >/dev/null
 git submodule update --init --recursive >/dev/null
