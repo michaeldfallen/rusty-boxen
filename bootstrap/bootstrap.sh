@@ -25,5 +25,5 @@ git submodule update --init --recursive >/dev/null
 echo "Boostrapping puppet..."
 apt-get install -y puppet >/dev/null
 apt-get install -y rubygems >/dev/null
-gem install --no-ri --no-rdoc rubygems-update
+gem install --no-ri --no-rdoc rubygems-update >/dev/null
 update_rubygems >/dev/null
