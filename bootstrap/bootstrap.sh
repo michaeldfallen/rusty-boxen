@@ -16,8 +16,8 @@ if [ ! -d /opt/rusty-boxen ]; then
 fi
 
 cd /opt/rusty-boxen
-git fetch >/dev/null
-git pull >/dev/null
+git fetch --quiet >/dev/null
+git pull --quiet >/dev/null
 git submodule update --init --recursive >/dev/null
 
 echo "Boostrapping puppet..."
