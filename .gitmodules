@@ -1,3 +1,0 @@
-[submodule "bootstrap/puppet-bootstrap"]
-	path = bootstrap/puppet-bootstrap
-	url = https://github.com/hashicorp/puppet-bootstrap
