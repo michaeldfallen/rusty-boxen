@@ -16,4 +16,5 @@ git clone --recurse-submodules --force https://github.com/michaeldfallen/rusty-b
 cd /opt/rusty-boxen
 
 echo "Boostrapping puppet..."
+chmod u+x ./bootstrap/puppet-bootstrap/ubuntu.sh
 ./bootstrap/puppet-bootstrap/ubuntu.sh
