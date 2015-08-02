@@ -11,9 +11,9 @@ echo "Installing git..."
 apt-get install -y git >/dev/null
 
 echo "Cloning rusty-boxen to /opt/rusty-boxen..."
-git clone --recurse-submodules https://github.com/michaeldfallen/rusty-boxen.git /opt/rusty-boxen
+git clone --recurse-submodules https://github.com/michaeldfallen/rusty-boxen.git /opt/rusty-boxen >/dev/null
 
-# cd /opt/rusty-boxen
+cd /opt/rusty-boxen
 
-# echo "Boostrapping puppet..."
-# ./bootstrap/puppet-bootstrap/ubuntu.sh
+echo "Boostrapping puppet..."
+./bootstrap/puppet-bootstrap/ubuntu.sh
