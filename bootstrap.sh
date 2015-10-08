@@ -24,3 +24,6 @@ git submodule update --init --recursive >/dev/null
 
 echo "Boostrapping puppet..."
 apt-get install -y puppet >/dev/null
+
+echo "Running puppet..."
+puppet apply manifests/site.pp
