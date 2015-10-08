@@ -4,10 +4,11 @@ class auto_puppet_apply {
   file { '/etc/init/boxen.conf':
     ensure => 'link',
     target => '/opt/rusty-boxen/modules/auto_puppet_apply/files/upstart.conf',
-    notify => Exec['my_command'],
+    notify => Exec['initctl-reload'],
   }
 
-  exec { 'initctl reload-configuration':
+  exec { 'initctl-reload':
+    command     => '/sbin/initctl reload-configuration',
     refreshonly => true,
     require     => File['/etc/init/boxen.conf'],
   }
