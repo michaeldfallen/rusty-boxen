@@ -3,9 +3,9 @@
 # Apply boxen
 
 echo "Updating rusty-boxen..."
-git fetch --quiet >/dev/null
-git reset --quiet --hard origin/master >/dev/null
-git submodule update --init --recursive >/dev/null
+git fetch
+git reset --hard origin/master
+git submodule update --init --recursive
 
 echo "Running Puppet apply..."
 puppet apply \
