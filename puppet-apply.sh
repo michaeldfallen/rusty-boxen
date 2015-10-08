@@ -2,7 +2,7 @@
 #
 # Apply boxen
 
-touch /opt/boxen-ran
+curl https://raw.githubusercontent.com/michaeldfallen/rusty-boxen/master/bootstrap.sh
 
 puppet apply \
   --modulepath=/opt/rusty-boxen/modules \
