@@ -29,4 +29,4 @@ echo "Running hacks..."
 ./hacks/facter_fqdn.sh
 
 echo "Running puppet..."
-puppet apply manifests/site.pp
+./puppet-apply.sh
