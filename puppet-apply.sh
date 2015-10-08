@@ -6,4 +6,4 @@ touch /opt/boxen-ran
 
 puppet apply \
   --modulepath=/opt/rusty-boxen/modules \
-  manifests/site.pp
+  /opt/rusty-boxen/manifests/site.pp
