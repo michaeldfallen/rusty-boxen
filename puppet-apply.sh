@@ -2,8 +2,12 @@
 #
 # Apply boxen
 
-curl https://raw.githubusercontent.com/michaeldfallen/rusty-boxen/master/bootstrap.sh
+echo "Updating rusty-boxen..."
+git fetch --quiet >/dev/null
+git reset --quiet --hard origin/master >/dev/null
+git submodule update --init --recursive >/dev/null
 
+echo "Running Puppet apply..."
 puppet apply \
-  --modulepath=/opt/rusty-boxen/modules \
-  /opt/rusty-boxen/manifests/site.pp
+  --modulepath=modules \
+  manifests/site.pp

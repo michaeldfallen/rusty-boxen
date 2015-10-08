@@ -17,11 +17,6 @@ fi
 
 cd /opt/rusty-boxen
 
-echo "Updating rusty-boxen..."
-git fetch --quiet >/dev/null
-git reset --quiet --hard origin/master >/dev/null
-git submodule update --init --recursive >/dev/null
-
 echo "Boostrapping puppet..."
 apt-get install -y puppet >/dev/null
 
