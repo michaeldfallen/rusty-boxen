@@ -3,6 +3,6 @@ class auto_puppet_apply {
 
   file { '/etc/init/boxen.conf':
     ensure => 'link',
-    target => "/opt/rusty-boxen/modules/${module_name}/upstart.conf",
+    target => '/opt/rusty-boxen/modules/auto_puppet_apply/files/upstart.conf',
   }
 }
