@@ -6,6 +6,7 @@ sudo -v
 
 echo "Installing git..."
 sudo apt-get install -y git >/dev/null
+sudo apt-get install -y xclip
 
 echo "Cloning rusty-boxen to /tmp/rusty-boxen..."
 git clone --recurse-submodules https://github.com/michaeldfallen/rusty-boxen.git /tmp/rusty-boxen

@@ -74,7 +74,7 @@ check_input() {
 }
 
 copy_to_clipboard() {
-  cat "${filepath}.pub" | pbcopy
+  cat "${filepath}.pub" | xclip -selection c
   echo "${filepath}.pub copied to your clipboard"
 }
 
