@@ -26,8 +26,8 @@ sudo ./hacks/facter_fqdn.sh
 
 echo "Running bootstrap..."
 puppet apply \
-  --modulepath=$dot/../modules \
-  $dot/../manifests/bootstrap.pp
+  --modulepath=/tmp/rusty-boxen/modules \
+  /tmp/rusty-boxen/manifests/bootstrap.pp
 
 echo "Running rusty..."
 sudo /opt/bin/rusty update
