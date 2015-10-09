@@ -8,11 +8,10 @@ echo "Installing git..."
 sudo apt-get install -y git >/dev/null
 sudo apt-get install -y xclip >/dev/null
 
-echo "Cloning rusty-boxen to /tmp/rusty-boxen..."
-rm -rf /tmp/rusty-boxen
-git clone --recurse-submodules https://github.com/michaeldfallen/rusty-boxen.git /tmp/rusty-boxen
+echo "Cloning rusty-boxen to /opt/rusty-boxen..."
+git clone --recurse-submodules https://github.com/michaeldfallen/rusty-boxen.git /opt/rusty-boxen
 
-cd /tmp/rusty-boxen
+cd /opt/rusty-boxen
 
 echo "Create ssh key..."
 ./bin/newsshkey "github.com"
@@ -24,13 +23,5 @@ sudo apt-get install -y puppet >/dev/null
 echo "Running hacks..."
 sudo ./hacks/facter_fqdn.sh
 
-echo "Running bootstrap..."
-puppet apply \
-  --modulepath=/tmp/rusty-boxen/modules \
-  /tmp/rusty-boxen/manifests/bootstrap.pp
-
 echo "Running rusty..."
 sudo /opt/rusty-boxen/bin/rusty update
-
-echo "Cleaning up..."
-rm -rf /tmp/rusty-boxen

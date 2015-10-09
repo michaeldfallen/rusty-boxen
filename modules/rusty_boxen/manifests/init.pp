@@ -1,15 +1,6 @@
 # Install rusty, to ensure our bootstrap didn't make mistakes
 class rusty_boxen {
 
-  vcsrepo { '/opt/rusty-boxen':
-    ensure   => present,
-    provider => git,
-    source   => 'git@github.com:michaeldfallen/rusty-boxen.git',
-    force    => true,
-    owner    => 'michael',
-    identity => '/home/michael/.ssh/github.com_rsa',
-  }
-
   file { '/etc/init/boxen.conf':
     ensure => 'link',
     target => '/opt/rusty-boxen/modules/rusty_boxen/files/upstart.conf',
