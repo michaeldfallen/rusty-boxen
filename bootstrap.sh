@@ -8,20 +8,18 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 echo "Installing git..."
-apt-get install -y git >/dev/null
+sudo apt-get install -y git >/dev/null
 
-if [ ! -d /opt/rusty-boxen ]; then
-  echo "Cloning rusty-boxen to /opt/rusty-boxen..."
-  git clone --recurse-submodules https://github.com/michaeldfallen/rusty-boxen.git /opt/rusty-boxen >/dev/null
-fi
+echo "Cloning rusty-boxen to /tmp/rusty-boxen..."
+git clone --recurse-submodules https://github.com/michaeldfallen/rusty-boxen.git /tmp/rusty-boxen >/dev/null
 
-cd /opt/rusty-boxen
+cd /tmp/rusty-boxen
 
 echo "Boostrapping puppet..."
-apt-get install -y puppet >/dev/null
+sudo apt-get install -y puppet >/dev/null
 
 echo "Running hacks..."
-./hacks/facter_fqdn.sh
+sudo ./hacks/facter_fqdn.sh
 
 echo "Running puppet..."
 ./bin/rusty update
