@@ -24,8 +24,13 @@ sudo apt-get install -y puppet >/dev/null
 echo "Running hacks..."
 sudo ./hacks/facter_fqdn.sh
 
-echo "Running puppet..."
-sudo ./bin/rusty update
+echo "Running bootstrap..."
+puppet apply \
+  --modulepath=$dot/../modules \
+  $dot/../manifests/bootstrap.pp
+
+echo "Running rusty..."
+sudo /opt/bin/rusty update
 
 echo "Cleaning up..."
 rm -rf /tmp/rusty-boxen
