@@ -7,7 +7,7 @@ class zsh (
     ensure => present,
   }
 
-  exec { "chsh -s ${path} ${user}":
+  exec { "/usr/bin/chsh -s ${path} ${user}":
     unless => "/bin/grep -E '^${user}.+:${path}$' /etc/passwd",
   }
 
