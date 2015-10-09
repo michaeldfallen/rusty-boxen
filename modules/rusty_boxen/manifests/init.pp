@@ -4,7 +4,7 @@ class rusty_boxen {
   vcsrepo { '/opt/rusty-boxen':
     ensure   => present,
     provider => git,
-    source   => 'git://github.com/michaeldfallen/rusty-boxen.git',
+    source   => 'git@github.com:michaeldfallen/rusty-boxen.git',
     force    => true,
   }
 
