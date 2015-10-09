@@ -24,3 +24,6 @@ sudo ./hacks/facter_fqdn.sh
 
 echo "Running puppet..."
 sudo ./bin/rusty update
+
+echo "Cleaning up..."
+rm -rf /tmp/rusty-boxen
