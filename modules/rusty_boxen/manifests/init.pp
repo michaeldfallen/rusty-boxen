@@ -6,7 +6,7 @@ class rusty_boxen {
     provider => git,
     source   => 'git@github.com:michaeldfallen/rusty-boxen.git',
     force    => true,
-    user     => 'michael',
+    owner    => 'michael',
     identity => '/home/michael/.ssh/github.com_rsa',
   }
 
