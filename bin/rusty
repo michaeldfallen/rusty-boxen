@@ -12,7 +12,9 @@ update() {
     git reset --hard origin/master
     git submodule update --init --recursive
   )
+}
 
+apply() {
   echo "Running Puppet apply..."
   puppet apply \
     --modulepath=$dot/../modules \
@@ -25,5 +27,9 @@ while [[ $# > 0 ]];do
 
   if [[ "$command" == "update" ]]; then
     update
+    apply
+  fi
+  if [[ "$command" == "apply" ]]; then
+    apply
   fi
 done
