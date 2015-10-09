@@ -6,9 +6,12 @@ dot="$(cd "$(dirname "$([ -L "$0" ] && readlink -f "$0" || echo "$0")")"; pwd)"
 
 update() {
   echo "Updating rusty-boxen..."
-  git fetch
-  git reset --hard origin/master
-  git submodule update --init --recursive
+  (
+    cd $dot/../
+    git fetch
+    git reset --hard origin/master
+    git submodule update --init --recursive
+  )
 
   echo "Running Puppet apply..."
   puppet apply \
