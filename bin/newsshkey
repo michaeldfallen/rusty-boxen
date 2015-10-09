@@ -61,6 +61,10 @@ check_input() {
     shift
   done
 
+  if [[ -f "$filepath" && -f "$ssh_config" && $(cat "$ssh_config" | grep "$(host_line)") ]]; then
+    copy_to_clipboard
+    exit 0
+  fi
   if [[ -f "$filepath" ]]; then
     error "An ssh key for $host exists. Run rm ~/.ssh/$filename to delete it."
   fi
