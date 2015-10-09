@@ -24,4 +24,4 @@ echo "Running hacks..."
 ./hacks/facter_fqdn.sh
 
 echo "Running puppet..."
-./puppet-apply.sh
+./bin/rusty update

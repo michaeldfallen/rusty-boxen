@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#
+# Apply boxen
+
+dot="$(cd "$(dirname "$([ -L "$0" ] && readlink -f "$0" || echo "$0")")"; pwd)"
+
+update() {
+  echo "Updating rusty-boxen..."
+  git fetch
+  git reset --hard origin/master
+  git submodule update --init --recursive
+
+  echo "Running Puppet apply..."
+  puppet apply \
+    --modulepath=$dot/../modules \
+    $dot/../manifests/site.pp
+}
+
+while [[ $# > 0 ]];do
+  command="$1"
+  shift
+
+  if [[ "$command" == "update" ]]; then
+    update
+  fi
+done

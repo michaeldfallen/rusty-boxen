@@ -1,4 +1,4 @@
-require ::auto_puppet_apply
+require ::rusty_boxen
 
 node default {
 }

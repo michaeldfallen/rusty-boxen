@@ -1,5 +1,11 @@
-# Ensures puppet apply is run on boot
-class auto_puppet_apply {
+# Install rusty, to ensure our bootstrap didn't make mistakes
+class rusty_boxen {
+
+  vcsrepo { '/opt/rusty-boxen':
+    ensure   => present,
+    provider => git,
+    source   => 'git://github.com/michaeldfallen/rusty-boxen.git'
+  }
 
   file { '/etc/init/boxen.conf':
     ensure => 'link',
