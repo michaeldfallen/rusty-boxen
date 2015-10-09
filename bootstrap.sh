@@ -14,7 +14,7 @@ cd /tmp/rusty-boxen
 
 echo "Create ssh key..."
 ./bin/newsshkey "github.com"
-read -p "Upload ssh key to Github then press any key to continue... " -n1 -s
+read -p "Upload ssh key to Github then press any key to continue... " -n1 -s </dev/tty
 
 echo "Boostrapping puppet..."
 sudo apt-get install -y puppet >/dev/null
