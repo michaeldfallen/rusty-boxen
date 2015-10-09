@@ -8,7 +8,7 @@ class zsh (
   }
 
   exec { "chsh -s ${path} ${user}":
-    unless => "grep -E '^${user}.+:${path}$' /etc/passwd",
+    unless => "/bin/grep -E '^${user}.+:${path}$' /etc/passwd",
   }
 
   if $user != 'root' {
