@@ -2,10 +2,7 @@
 #
 # Bootstraps Rusty from 0 to puppet
 
-if [ "$(id -u)" != "0" ]; then
-  echo "This script must be run as root." >&2
-  exit 1
-fi
+sudo -v
 
 echo "Installing git..."
 sudo apt-get install -y git >/dev/null
