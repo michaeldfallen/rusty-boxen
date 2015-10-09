@@ -19,4 +19,4 @@ echo "Running hacks..."
 sudo ./hacks/facter_fqdn.sh
 
 echo "Running puppet..."
-./bin/rusty update
+sudo ./bin/rusty update
