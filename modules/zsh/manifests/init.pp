@@ -3,7 +3,7 @@ class zsh (
     $user = 'michael',
     $path='/usr/bin/zsh'
 ) {
-  package { 'zsh':
+  package { ['zsh', 'tilda']:
     ensure => present,
   }
 
