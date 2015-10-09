@@ -30,7 +30,7 @@ puppet apply \
   /tmp/rusty-boxen/manifests/bootstrap.pp
 
 echo "Running rusty..."
-sudo /opt/bin/rusty update
+sudo /opt/rusty-boxen/bin/rusty update
 
 echo "Cleaning up..."
 rm -rf /tmp/rusty-boxen
