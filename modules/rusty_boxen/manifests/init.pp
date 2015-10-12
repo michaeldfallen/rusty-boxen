@@ -1,6 +1,8 @@
 # Install rusty, to ensure our bootstrap didn't make mistakes
 class rusty_boxen {
 
+  zsh::path { '/opt/rusty-boxen/bin': }
+
   file { '/etc/init/boxen.conf':
     ensure => 'link',
     target => '/opt/rusty-boxen/modules/rusty_boxen/files/upstart.conf',
