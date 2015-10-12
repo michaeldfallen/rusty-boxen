@@ -5,7 +5,7 @@ class vim::installation::youcompleteme (
   require ::libs::c
   require ::libs::python
 
-  $ycm = "/home/${user}/.vim/YouCompleteMe"
+  $ycm = "/home/${user}/.vim/bundle/YouCompleteMe"
   exec { "${ycm}/install.py --clang-completer":
     cwd         => $ycm,
     subscribe   => Vcsrepo[$ycm],
