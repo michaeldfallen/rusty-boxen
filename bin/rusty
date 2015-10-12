@@ -25,6 +25,8 @@ while [[ $# > 0 ]];do
   command="$1"
   shift
 
+  sudo -v
+
   if [[ "$command" == "update" ]]; then
     update
     apply
