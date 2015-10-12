@@ -1,5 +1,20 @@
 # Base ZSHRC
 
-for f in $HOME/zshrc.d/*.zsh; do
+# Source all path files
+for f in $HOME/zshrc.d/path/*.zsh(.N); do
+  source $f
+done
+
+# Source all ZSH files
+for f in $HOME/zshrc.d/*.zsh(.N); do
+  source $f
+done
+
+# Initialize autocompletion
+autoload -U compinit
+compinit
+
+# Source automcompletions
+for f in $HOME/zshrc.d/completion/*.zsh(.N); do
   source $f
 done
