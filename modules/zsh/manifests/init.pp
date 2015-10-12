@@ -24,5 +24,17 @@ class zsh (
       owner  => $user,
       group  => $user,
     }
+
+    file { "/home/${user}/.zshrc.d/path":
+      ensure => 'directory',
+      owner  => $user,
+      group  => $user,
+    }
+
+    file { "/home/${user}/.zshrc.d/completion":
+      ensure => 'directory',
+      owner  => $user,
+      group  => $user,
+    }
   }
 }
