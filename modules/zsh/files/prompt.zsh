@@ -17,7 +17,7 @@ git_radar() {
   fi
 }
 
-export PROMPT=$'$(ret_status)$(directory_name)'
+export PROMPT=$'$(ret_status)$(directory_name) '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
