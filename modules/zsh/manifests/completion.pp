@@ -1,5 +1,5 @@
 # Defines a zsh completion that adds tab completion
-class zsh::completion (
+define zsh::completion (
   $content = undef,
   $source = undef,
   $name = $title,

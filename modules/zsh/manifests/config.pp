@@ -1,15 +1,17 @@
 # Defines a new zsh config file that will be picked up by zshrc
 define zsh::config (
-  $source,
+  $content = undef,
+  $source = undef,
   $name = $title,
   $owner = 'michael'
 ) {
   require ::zsh
 
   file { "${title} zsh config":
-    path   => "/home/${owner}/.zshrc.d/${name}",
-    source => $source,
-    owner  => $owner,
-    group  => $owner,
+    path    => "/home/${owner}/.zshrc.d/${name}",
+    source  => $source,
+    content => $content,
+    owner   => $owner,
+    group   => $owner,
   }
 }

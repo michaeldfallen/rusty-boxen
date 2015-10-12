@@ -7,13 +7,11 @@ class zsh::default {
     source => 'puppet:///modules/zsh/basic_opts.zsh',
   }
 
-  zsh::config { 'prompt':
-    name   => 'prompt.zsh',
+  zsh::config { 'prompt.zsh':
     source => 'puppet:///modules/zsh/prompt.zsh',
   }
 
-  zsh::config { 'window title':
-    name   => 'window.zsh',
+  zsh::config { 'window.zsh':
     source => 'puppet:///modules/zsh/window.zsh',
   }
 
