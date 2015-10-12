@@ -1,0 +1,172 @@
+execute pathogen#infect()
+
+syntax on
+let python_highlight_all = 1
+
+" Wrap gitcommit file types at the appropriate length
+filetype indent plugin on
+
+" Fonts and colors
+colorscheme molokai
+if has('gui_running')
+  set guifont=Meslo_LG_S_Regular_for_Powerline:h14
+endif
+
+" Color column 80 as a guide for line length
+set colorcolumn=80
+
+"Enabling hybrid line numbers
+set relativenumber
+set number
+
+" Tabbing and indent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set cindent
+set smartindent
+set autoindent
+
+" Set the terminal title to the current document
+set title
+
+" Ignore files by default (used by CommandT, YouCompleteMe, etc)
+set wildignore+=*.class,**/target/**,**/bin/**,_site/**
+
+" Hide gvim/macvims scrollbars and the Toolbar
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+
+" Hide gvims menubar
+" on macvim the menu items are on the mac top menubar so we can't remove
+set guioptions-=m
+
+" Customise Search functions
+set incsearch  "highligh results as you search
+set ignorecase "lower case match either case
+set smartcase  "upper case only match upper case
+set hlsearch   "highlight all search results
+
+" NerdTree don't open on startup
+let g:nerdtree_tabs_open_on_gui_startup=0
+
+" Alias Q for q and W for w to fix the :Q not a command problems
+cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('q'):('Q'))
+cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+
+" Airline settings
+set noshowmode
+set ttimeoutlen=10
+let g:airline_powerline_fonts=1
+let g:Powerline_symbols = 'fancy'
+set nocompatible
+set laststatus=2
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+
+" Change the window split character
+set fillchars+=vert:\┃
+
+" Show trailing spaces and tabs
+set list listchars=tab:»·,trail:·
+
+" Indent lines plugin for indentation guides
+let g:indentLine_faster = 1
+let g:indentLine_char = '│'
+let g:indentLine_color_gui = '#333333'
+
+" YouCompleteMe autoclose the preview
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+" YouCompleteMe use SuperTab so we don't conflict with Ultisnips
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" YouCompleteMe \+g to jump to declaration
+nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" Syntastic add syntastic messages to status line
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" Syntastic :sign interface symbols
+let g:syntastic_enable_signs=1
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_style_warning_symbol = '!'
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
+
+" these work better with molokai
+highlight! link SyntasticWarningSign Label
+highlight! link SyntasticErrorSign Keyword
+
+" Syntastic Location list and checks
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+" Syntastic checker settings
+let g:syntastic_python_checkers = ['flake8', 'python']
+
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+
+let g:syntastic_filetype_map = { 'html.mustache': 'mustache' }
+
+let g:syntastic_sass_sass_args = '--load-path "~/Projects/land-registry/govuk_frontend_toolkit/stylesheets"'
+
+au BufRead,BufNewFile */puppet/manifests/init.pp let b:syntastic_puppet_puppetlint_args = '--no-autoloader_layout-check'
+au BufRead,BufNewFile */Puppetfile let b:syntastic_ruby_rubocop_args = '--except Style/FileName'
+au BufRead,BufNewFile */puppet/*.erb let b:syntastic_eruby_ruby_quiet_messages = { 'regex': 'possibly useless use of a variable in void context' }
+
+" Ack.vim aliases, death to mixed caps
+cnoreabbrev <expr> ack ((getcmdtype() is# ':' && getcmdline() is# 'ack')?('Ack'):('ack'))
+
+" Custom file types
+au BufNewFile,BufRead *.zsh set filetype=sh
+au BufNewFile,BufRead *.tf set filetype=javascript
+
+" Custom button mappings
+"   open NerdTree
+nmap \e :NERDTreeToggle<CR>
+"   clears highlighted results
+nmap \q :nohlsearch<CR>
+
+" NERD_tree config
+let NERDTreeChDirMode=2
+let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$', '__pycache__']
+let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+
+" GitV custom commands
+let g:Gitv_OpenHorizontal = 1
+" Prevent folding in gitv dialogs
+augroup git
+  au!
+  autocmd FileType git :setlocal foldlevel=99
+augroup END
+
+" Vim-markdowns folding is not useful
+let g:vim_markdown_folding_disabled=1
+
+" Use Ctrl+[hjkl] for switching between panes
+noremap <C-Down> <C-W>j
+noremap <C-Up> <C-W>k
+noremap <C-Left> <C-W>h
+noremap <C-Right> <C-W>l
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
+
+" Map <Leader>+o (for outline) to open tagbar
+nmap \o :TagbarToggle<CR>
