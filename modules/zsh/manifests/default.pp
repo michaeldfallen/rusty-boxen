@@ -16,4 +16,8 @@ class zsh::default {
     name   => 'window.zsh',
     source => 'puppet:///modules/zsh/window.zsh',
   }
+
+  zsh::completion { 'case-insensitive.zsh':
+    content => "zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'"
+  }
 }
