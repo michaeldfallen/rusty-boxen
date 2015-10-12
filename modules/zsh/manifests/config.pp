@@ -2,7 +2,7 @@
 define zsh::config (
   $content = undef,
   $source = undef,
-  $name = $title,
+  $file = $title,
   $owner = 'michael'
 ) {
   require ::zsh

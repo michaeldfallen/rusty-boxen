@@ -2,11 +2,10 @@
 define zsh::completion (
   $content = undef,
   $source = undef,
-  $name = $title,
-  $owner = 'michael'
+  $file = $title,
 ) {
   zsh::config { "${title} completion":
-    name    => "completion/${name}",
+    file    => "completion/${file}",
     source  => $source,
     content => $content,
   }
