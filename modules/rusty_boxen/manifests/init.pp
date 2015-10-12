@@ -3,6 +3,13 @@ class rusty_boxen {
 
   path::bin { '/opt/rusty-boxen/bin/rusty': }
 
+  vcsrepo { '/opt/rusty-tmp':
+    ensure   => latest,
+    source   => 'git@github.com:michaeldfallen/rusty-boxen',
+    user     => 'michael',
+    provider => git,
+  }
+
   file { '/etc/init/boxen.conf':
     ensure => 'link',
     target => '/opt/rusty-boxen/modules/rusty_boxen/files/upstart.conf',
