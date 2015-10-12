@@ -2,8 +2,7 @@
 class zsh::default {
   require ::zsh
 
-  zsh::config { 'basic options':
-    name   => 'basic_opts.zsh',
+  zsh::config { 'basic_opts.zsh':
     source => 'puppet:///modules/zsh/basic_opts.zsh',
   }
 
