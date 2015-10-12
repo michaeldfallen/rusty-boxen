@@ -70,7 +70,7 @@ class vim::plugin_repos ( $user = 'michael' ) {
   }
 
   $repo_defaults = {
-    ensure   => latest,
+    ensure   => present,
     user     => $user,
     owner    => $user,
     group    => $user,
