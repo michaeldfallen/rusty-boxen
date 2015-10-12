@@ -7,7 +7,9 @@ define zsh::config (
   require ::zsh
 
   file { "${title} zsh config":
-    path   => "/home/${owner}/.zshrc.d/config_${name}",
+    path   => "/home/${owner}/.zshrc.d/${name}",
     source => $source,
+    owner  => $owner,
+    group  => $owner,
   }
 }
