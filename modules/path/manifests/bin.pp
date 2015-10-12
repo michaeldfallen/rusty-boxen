@@ -1,5 +1,5 @@
-# Adds stuff to the zsh PATH
-define zsh::path (
+# Adds stuff to the PATH
+define path::bin (
   $owner = 'michael'
 ) {
   $splt = split($title, '/')
