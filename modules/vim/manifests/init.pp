@@ -2,6 +2,8 @@
 class vim (
   $user = 'michael'
 ) {
+  require ::vim::plugins
+
   package { 'vim-gtk': }
 
   file { "/home/${user}/.vim":
