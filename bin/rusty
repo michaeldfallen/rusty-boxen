@@ -16,7 +16,7 @@ update() {
 
 apply() {
   echo "Running Puppet apply..."
-  puppet apply \
+  sudo puppet apply \
     --modulepath=$dot/../modules \
     $dot/../manifests/site.pp
 }
