@@ -8,5 +8,7 @@ define path::bin (
   file { "/usr/local/bin/${filename}":
     ensure => 'link',
     target => $title,
+    owner  => $owner,
+    group  => $owner,
   }
 }
