@@ -23,7 +23,7 @@ class git (
     owner  => $user,
     group  => $user,
   } ~> exec { 'git-completion.zsh':
-    command => 'wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh',
+    command => '/usr/bin/wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh',
     cwd     => $zsh_dir,
     creates => "${zsh_dir}/git-completion.zsh",
     user    => $user,
