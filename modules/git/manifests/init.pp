@@ -16,4 +16,11 @@ class git (
     user        => $user,
     environment => "HOME=/home/${user}"
   }
+  file { "/home/${user}/.zsh/_git":
+    source => 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh',
+    owner  => $user,
+    group  => $user,
+  } ~> zsh::path { 'git.zsh':
+    content => 'fpath=(~/.zsh $fpath)'
+  }
 }
