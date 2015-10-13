@@ -5,5 +5,6 @@ class fonts ( $user = 'michael' ) {
     unless      =>
       '/bin/test -f $HOME/.fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf',
     environment => "HOME=/home/${user}",
+    user        => $user,
   }
 }

@@ -5,4 +5,5 @@ node default {
   include ::zsh::default
   include ::vim
   include ::git
+  include ::fonts
 }
