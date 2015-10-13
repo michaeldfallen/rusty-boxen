@@ -9,7 +9,7 @@ filetype indent plugin on
 " Fonts and colors
 colorscheme molokai
 if has('gui_running')
-  set guifont=Meslo_LG_S_Regular_for_Powerline:h14
+  set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
 endif
 
 " Color column 80 as a guide for line length
