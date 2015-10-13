@@ -67,3 +67,6 @@
 [submodule "modules/vim/files/vim/bundle/vim-librarian"]
 	path = modules/vim/files/vim/bundle/vim-librarian
 	url = https://github.com/hron84/vim-librarian.git
+[submodule "modules/fonts/files/fonts"]
+	path = modules/fonts/files/fonts
+	url = https://github.com/powerline/fonts
