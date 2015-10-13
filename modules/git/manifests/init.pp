@@ -16,10 +16,17 @@ class git (
     user        => $user,
     environment => "HOME=/home/${user}"
   }
-  file { "/home/${user}/.zsh/_git":
-    source => 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh',
+
+  $zsh_dir = "/home/${user}/.zsh"
+  file { $zsh_dir:
+    ensure => directory,
     owner  => $user,
     group  => $user,
+  } ~> exec { 'git-completion.zsh':
+    command => 'wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh',
+    cwd     => $zsh_dir,
+    creates => "${zsh_dir}/git-completion.zsh",
+    user    => $user,
   } ~> zsh::path { 'git.zsh':
     content => 'fpath=(~/.zsh $fpath)'
   }
