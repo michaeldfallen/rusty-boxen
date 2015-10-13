@@ -8,6 +8,7 @@ class git {
     '/usr/bin/git config --global user.email "michael@michaelallen.io"'
   ]
   exec { $config:
-    require => Package['git']
+    require => Package['git'],
+    user    => 'michael',
   }
 }
