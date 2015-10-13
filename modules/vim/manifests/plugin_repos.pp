@@ -75,6 +75,7 @@ class vim::plugin_repos ( $user = 'michael' ) {
     owner    => $user,
     group    => $user,
     provider => git,
+    require  => File["/home/${user}/.vim"],
   }
 
   create_resources('vcsrepo', $bundles, $repo_defaults)

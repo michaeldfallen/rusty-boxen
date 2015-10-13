@@ -2,7 +2,7 @@
 class vim (
   $user = 'michael'
 ) {
-  require ::vim::plugins
+  include ::vim::plugins
 
   package { 'vim-gtk': }
 
