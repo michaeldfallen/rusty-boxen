@@ -7,13 +7,18 @@ class git (
   package { 'git':
     ensure => present
   }
-  $config = [
-    "/usr/bin/git config --global user.name '${git_username}'",
-    "/usr/bin/git config --global user.email '${git_email}'",
-  ]
-  exec { $config:
+  exec { "/usr/bin/git config --global user.email '${git_email}'":
     require     => Package['git'],
     user        => $user,
+    unless      =>
+      "/bin/cat \$HOME/.gitconfig | /bin/grep 'email = ${git_email}'",
+    environment => "HOME=/home/${user}"
+  }
+  exec { "/usr/bin/git config --global user.name '${git_username}'":
+    require     => Package['git'],
+    user        => $user,
+    unless      =>
+      "/bin/cat \$HOME/.gitconfig | /bin/grep 'name = ${git_username}'",
     environment => "HOME=/home/${user}"
   }
 
