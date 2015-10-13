@@ -5,13 +5,13 @@ class vim::installation::youcompleteme (
   require ::libs::c
   require ::libs::python
 
-  $ycm = "/home/${user}/.vim/bundle/YouCompleteMe"
+  $vim = "/home/${user}/.vim"
+  $ycm = "${vim}/bundle/YouCompleteMe"
   exec { "${ycm}/install.py":
     cwd         => $ycm,
     timeout     => 1800,
-    subscribe   => Vcsrepo[$ycm],
     refreshonly => true,
     user        => $user,
-    require     => Vcsrepo[$ycm],
+    require     => File[$vim],
   }
 }

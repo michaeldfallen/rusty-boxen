@@ -1,3 +1,69 @@
 [submodule "modules/vcsrepo"]
 	path = modules/vcsrepo
 	url = https://github.com/puppetlabs/puppetlabs-vcsrepo
+[submodule "modules/vim/files/vim/bundle/Command-T"]
+	path = modules/vim/files/vim/bundle/Command-T
+	url = git@github.com:michaeldfallen/Command-T.git
+[submodule "modules/vim/files/vim/bundle/vim-mustache-handlebars"]
+	path = modules/vim/files/vim/bundle/vim-mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars.git
+[submodule "modules/vim/files/vim/bundle/nerdtree"]
+	path = modules/vim/files/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "modules/vim/files/vim/bundle/vim-airline"]
+	path = modules/vim/files/vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "modules/vim/files/vim/bundle/vim-gitgutter"]
+	path = modules/vim/files/vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "modules/vim/files/vim/bundle/vim-markdown"]
+	path = modules/vim/files/vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "modules/vim/files/vim/bundle/vim-scala"]
+	path = modules/vim/files/vim/bundle/vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "modules/vim/files/vim/bundle/YouCompleteMe"]
+	path = modules/vim/files/vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "modules/vim/files/vim/bundle/vim-snippets"]
+	path = modules/vim/files/vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "modules/vim/files/vim/bundle/ultisnips"]
+	path = modules/vim/files/vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "modules/vim/files/vim/bundle/supertab"]
+	path = modules/vim/files/vim/bundle/supertab
+	url = https://github.com/ervandew/supertab
+[submodule "modules/vim/files/vim/bundle/syntastic"]
+	path = modules/vim/files/vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "modules/vim/files/vim/bundle/ack.vim"]
+	path = modules/vim/files/vim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "modules/vim/files/vim/bundle/indentLine"]
+	path = modules/vim/files/vim/bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "modules/vim/files/vim/bundle/gitv"]
+	path = modules/vim/files/vim/bundle/gitv
+	url = https://github.com/gregsexton/gitv.git
+[submodule "modules/vim/files/vim/bundle/vim-fugitive"]
+	path = modules/vim/files/vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "modules/vim/files/vim/bundle/nerdtree-git-plugin"]
+	path = modules/vim/files/vim/bundle/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "modules/vim/files/vim/bundle/vim-puppet"]
+	path = modules/vim/files/vim/bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet.git
+[submodule "modules/vim/files/vim/bundle/tagbar"]
+	path = modules/vim/files/vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "modules/vim/files/vim/bundle/python-syntax"]
+	path = modules/vim/files/vim/bundle/python-syntax
+	url = https://github.com/hdima/python-syntax.git
+[submodule "modules/vim/files/vim/bundle/auto-pairs"]
+	path = modules/vim/files/vim/bundle/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "modules/vim/files/vim/bundle/vim-librarian"]
+	path = modules/vim/files/vim/bundle/vim-librarian
+	url = https://github.com/hron84/vim-librarian.git
