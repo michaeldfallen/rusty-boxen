@@ -11,6 +11,7 @@ class vim::installation::youcompleteme (
     timeout     => 1800,
     subscribe   => Vcsrepo[$ycm],
     refreshonly => true,
+    user        => $user,
     require     => Vcsrepo[$ycm],
   }
 }
