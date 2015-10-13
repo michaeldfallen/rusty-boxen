@@ -8,10 +8,10 @@ class vim::installation::youcompleteme (
   $vim = "/home/${user}/.vim"
   $ycm = "${vim}/bundle/YouCompleteMe"
   exec { "${ycm}/install.py":
-    cwd         => $ycm,
-    timeout     => 1800,
-    refreshonly => true,
-    user        => $user,
-    require     => File[$vim],
+    cwd     => $ycm,
+    timeout => 1800,
+    unless  => "/usr/bin/test -f ${ycm}/third_party/ycmd/ycm_core.so",
+    user    => $user,
+    require => File[$vim],
   }
 }

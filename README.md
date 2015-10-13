@@ -7,5 +7,5 @@ Puppet provisioning of my ubuntu-based Thinkpad "Rusty", taking cues from Boxen.
 Easy installation
 
 ```
-curl --progress-bar https://raw.githubusercontent.com/michaeldfallen/rusty-boxen/master/bootstrap.sh | sudo bash
+wget -O - https://raw.githubusercontent.com/michaeldfallen/rusty-boxen/master/bootstrap.sh | bash
 ```
