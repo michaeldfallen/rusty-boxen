@@ -1,6 +1,6 @@
 # Installs the Powerline fonts
 class fonts ( $user = 'michael' ) {
-  $preferred_font = 'Meslo LG S Regular for Powerline 12'
+  $preferred_font = 'Meslo LG S for Powerline 12'
   $mono_font = 'org.gnome.desktop.interface monospace-font-name'
   $current = "/usr/bin/gsettings get ${mono_font}"
   $set_font = "/usr/bin/gsettings set ${mono_font} \"${preferred_font}\""
