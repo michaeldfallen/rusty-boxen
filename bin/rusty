@@ -21,12 +21,20 @@ apply() {
     $dot/../manifests/site.pp
 }
 
+log () {
+  echo "Executed rusty-boxen"
+  echo "Current date/time $(date)"
+}
+
 while [[ $# > 0 ]];do
   command="$1"
   shift
 
   sudo -v
 
+  if [[ "$command" == "log" ]]; then
+    log
+  fi
   if [[ "$command" == "update" ]]; then
     update
     apply
