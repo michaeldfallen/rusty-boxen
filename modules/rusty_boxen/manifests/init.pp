@@ -1,6 +1,5 @@
 # Install rusty, to ensure our bootstrap didn't make mistakes
 class rusty_boxen {
-
   path::bin { '/opt/rusty-boxen/bin/rusty': }
 
   file { '/etc/init/boxen.conf':
