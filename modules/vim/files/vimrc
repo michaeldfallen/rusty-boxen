@@ -147,7 +147,7 @@ nmap \q :nohlsearch<CR>
 
 " NERD_tree config
 let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$', '__pycache__']
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$', '__pycache__']
 let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 
 " GitV custom commands
