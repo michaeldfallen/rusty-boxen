@@ -1,0 +1,4 @@
+style "vimfix" {
+  bg[NORMAL] = "#1B1D1E" # match to background style
+}
+widget "vim-main-window.*GtkForm" style "vimfix"

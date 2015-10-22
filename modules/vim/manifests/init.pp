@@ -6,6 +6,11 @@ class vim (
 
   package { 'vim-gtk': }
 
+  file { "/home/${user}/.gtkrc-2.0":
+    ensure => 'link',
+    target => '/opt/rusty-boxen/modules/vim/files/gtkrc-2.0',
+  }
+
   file { "/home/${user}/.vim":
     ensure => 'link',
     target => '/opt/rusty-boxen/modules/vim/files/vim',
