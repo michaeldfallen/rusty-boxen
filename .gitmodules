@@ -73,3 +73,9 @@
 [submodule "modules/gnome"]
 	path = modules/gnome
 	url = https://github.com/camptocamp/puppet-gnome
+[submodule "modules/rbenv"]
+	path = modules/rbenv
+	url = https://github.com/justindowning/puppet-rbenv
+[submodule "modules/stdlib"]
+	path = modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib

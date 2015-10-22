@@ -4,9 +4,8 @@ class git (
   $git_username = 'Michael Allen',
   $git_email = 'michael@michaelallen.io',
 ) {
-  package { 'git':
-    ensure => present
-  }
+  ensure_packages(['git'])
+
   exec { "/usr/bin/git config --global user.email '${git_email}'":
     require     => Package['git'],
     user        => $user,
