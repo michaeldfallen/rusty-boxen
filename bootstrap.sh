@@ -4,6 +4,9 @@
 
 sudo -v
 
+echo "Update apt-get..."
+sudo apt-get update
+
 echo "Installing git..."
 sudo apt-get install -y git >/dev/null
 sudo apt-get install -y xclip >/dev/null
