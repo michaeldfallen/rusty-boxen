@@ -13,8 +13,20 @@ class zsh (
 
   if $user != 'root' {
     file { "/home/${user}/.zshrc":
-      ensure => 'file',
-      source => 'puppet:///modules/zsh/zshrc',
+      ensure => 'link',
+      target => '/opt/rusty-boxen/modules/zsh/files/zshrc',
+      owner  => $user,
+      group  => $user,
+    }
+
+    file { ["/home/${user}/.config", "/home/${user}/.config/tilda"]:
+      ensure => 'directory',
+      owner  => $user,
+      group  => $user,
+    } ~>
+    file { "/home/${user}/.config/tilda/config_0":
+      ensure => 'link',
+      target => '/opt/rusty-boxen/modules/zsh/files/tilda_config',
       owner  => $user,
       group  => $user,
     }
