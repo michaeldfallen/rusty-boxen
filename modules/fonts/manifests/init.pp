@@ -1,5 +1,6 @@
 # Installs the Powerline fonts
 class fonts ( $user = 'michael' ) {
+  $font_dir = '/opt/rusty-boxen/modules/fonts/files/fonts'
 
   exec { "${font_dir}/install.sh":
     cwd         => '/opt/rusty-boxen/modules/fonts/files/fonts',
