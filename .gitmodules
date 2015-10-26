@@ -1,5 +1,5 @@
-[submodule "modules/vcsrepo"]
-	path = modules/vcsrepo
+[submodule "vendor/vcsrepo"]
+	path = vendor/vcsrepo
 	url = https://github.com/puppetlabs/puppetlabs-vcsrepo
 [submodule "modules/vim/files/vim/bundle/Command-T"]
 	path = modules/vim/files/vim/bundle/Command-T
@@ -70,15 +70,15 @@
 [submodule "modules/fonts/files/fonts"]
 	path = modules/fonts/files/fonts
 	url = https://github.com/powerline/fonts
-[submodule "modules/gnome"]
-	path = modules/gnome
+[submodule "vendor/gnome"]
+	path = vendor/gnome
 	url = https://github.com/camptocamp/puppet-gnome
-[submodule "modules/rbenv"]
-	path = modules/rbenv
+[submodule "vendor/rbenv"]
+	path = vendor/rbenv
 	url = https://github.com/justindowning/puppet-rbenv
-[submodule "modules/stdlib"]
-	path = modules/stdlib
+[submodule "vendor/stdlib"]
+	path = vendor/stdlib
 	url = https://github.com/puppetlabs/puppetlabs-stdlib
-[submodule "modules/apt"]
-	path = modules/apt
+[submodule "vendor/apt"]
+	path = vendor/apt
 	url = https://github.com/puppetlabs/puppetlabs-apt
