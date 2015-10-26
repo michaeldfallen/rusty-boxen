@@ -1,4 +1,5 @@
 require ::rusty_boxen
+require ::ubuntu
 
 Exec {
   group => 'adm',
