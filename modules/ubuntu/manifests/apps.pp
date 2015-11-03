@@ -1,0 +1,13 @@
+# Install apps
+class ubuntu::apps {
+  require ::libs::node
+
+  package { 'plaidchat':
+    provider => 'npm'
+  }
+  package { [
+    'spotify-client',
+    'everpad',
+    'google-chrome-stable',
+  ]: }
+}

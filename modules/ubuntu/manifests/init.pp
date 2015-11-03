@@ -1,8 +1,10 @@
+# Configure ubuntu specific stuff
 class ubuntu {
   class { 'apt':
     update => {
       frequency => 'weekly',
     },
   }
-  apt::ppa { 'ppa:git-core/ppa': }
+
+  include ::ubuntu::sources
 }
