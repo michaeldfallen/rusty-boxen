@@ -82,3 +82,6 @@
 [submodule "vendor/apt"]
 	path = vendor/apt
 	url = https://github.com/puppetlabs/puppetlabs-apt
+[submodule "vendor/nodejs"]
+	path = vendor/nodejs
+	url = https://github.com/puppet-community/puppet-nodejs
