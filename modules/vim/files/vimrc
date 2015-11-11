@@ -9,7 +9,7 @@ filetype indent plugin on
 " Fonts and colors
 colorscheme molokai
 if has('gui_running')
-  set guifont=Meslo\ LG\ S\ for\ Powerline\ 12
+  set guifont=Meslo\ LG\ S\ for\ Powerline\ 13
 endif
 
 " Share the clipboard y copies into clipboard p pastes from it
