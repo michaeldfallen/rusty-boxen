@@ -5,6 +5,10 @@ class ubuntu::apps {
   package { 'plaidchat':
     provider => 'npm'
   }
+  file { '/usr/share/applications/slack.desktop':
+    ensure => link,
+    target => '/opt/rusty-boxen/modules/ubuntu/files/slack.desktop',
+  }
   package { [
     'spotify-client',
     # 'everpad', # unavailable on wily

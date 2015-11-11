@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Slack
+Comment=A Slack Interface for Linux
+Icon=/usr/local/lib/node_modules/plaidchat/app/images/app-256.png
+Exec=plaidchat
+Terminal=false
+Type=Application
+Categories=Network;Chat;
+Keywords=slack;plaidchat;chat;instant-messaging;
