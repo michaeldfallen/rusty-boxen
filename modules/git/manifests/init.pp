@@ -20,6 +20,12 @@ class git (
       "/bin/cat \$HOME/.gitconfig | /bin/grep 'name = ${git_username}'",
     environment => "HOME=/home/${user}"
   }
+  exec { 'git config --global push.default simple':
+    require     => Package['git'],
+    user        => $user,
+    unless      => '/usr/bin/git config --global push.default',
+    environment => "HOME=/home/${user}",
+  }
 
   $zsh_dir = "/home/${user}/.zsh"
   file { $zsh_dir:
