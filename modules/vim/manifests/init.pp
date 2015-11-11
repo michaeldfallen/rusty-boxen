@@ -4,7 +4,10 @@ class vim (
 ) {
   include ::vim::plugins
 
-  package { 'vim-gtk': }
+  package { [
+    'vim-gtk',
+    'exuberant-ctags'
+  ]: }
 
   file { "/home/${user}/.gtkrc-2.0":
     ensure => 'link',
