@@ -2,7 +2,7 @@
 class ubuntu::sources {
   apt::ppa { [
     'ppa:git-core/ppa', # Git source
-    'ppa:nvbn-rm/ppa', # Everpad source (evernote alt)
+    #    'ppa:nvbn-rm/ppa', # Everpad source (evernote alt) unavailable on wily
   ]: }
 
   apt::source { 'spotify':

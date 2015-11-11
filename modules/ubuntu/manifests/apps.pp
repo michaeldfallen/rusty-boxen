@@ -7,7 +7,7 @@ class ubuntu::apps {
   }
   package { [
     'spotify-client',
-    'everpad',
+    # 'everpad', # unavailable on wily
     'google-chrome-stable',
   ]: }
 }
