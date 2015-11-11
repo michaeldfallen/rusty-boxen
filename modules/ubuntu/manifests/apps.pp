@@ -9,5 +9,8 @@ class ubuntu::apps {
     'spotify-client',
     # 'everpad', # unavailable on wily
     'google-chrome-stable',
+    'caffeine',
   ]: }
+
+  ::ubuntu::autostart { 'caffeine-indicator': }
 }

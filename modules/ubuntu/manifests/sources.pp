@@ -2,6 +2,7 @@
 class ubuntu::sources {
   apt::ppa { [
     'ppa:git-core/ppa', # Git source
+    'ppa:nilarimogard/webupd8',
     #    'ppa:nvbn-rm/ppa', # Everpad source (evernote alt) unavailable on wily
   ]: }
 
