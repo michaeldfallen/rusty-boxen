@@ -10,6 +10,8 @@ class ubuntu::apps {
     # 'everpad', # unavailable on wily
     'google-chrome-stable',
     'caffeine',
+    'gconf-editor',
+    'dconf-editor',
   ]: }
 
   ::ubuntu::autostart { 'caffeine-indicator': }
