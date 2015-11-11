@@ -6,5 +6,5 @@ class ubuntu {
     },
   }
 
-  include ::ubuntu::sources
+  include ::ubuntu::apps
 }

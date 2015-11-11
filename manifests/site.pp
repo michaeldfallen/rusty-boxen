@@ -1,5 +1,5 @@
 require ::rusty_boxen
-require ::ubuntu
+require ::ubuntu::sources
 
 Exec {
   group => 'adm',
@@ -22,5 +22,5 @@ node default {
   include ::git
   include ::fonts
   include ::libs
-  include ::ubuntu::apps
+  include ::ubuntu
 }
