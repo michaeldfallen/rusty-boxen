@@ -8,4 +8,5 @@ class ubuntu {
 
   include ::ubuntu::config
   include ::ubuntu::apps
+  include ::ubuntu::optimus
 }
