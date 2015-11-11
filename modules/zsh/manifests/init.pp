@@ -7,6 +7,10 @@ class zsh (
     ensure => present,
   }
 
+  ::ubuntu::autostart { 'tilda':
+    exec => 'tilda -h'
+  }
+
   exec { "/usr/bin/chsh -s ${path} ${user}":
     unless => "/bin/grep -E '^${user}.+:${path}$' /etc/passwd",
   }
