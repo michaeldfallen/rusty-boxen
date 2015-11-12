@@ -4,5 +4,6 @@ class ubuntu::optimus {
     'bumblebee-nvidia',
     'primus',
     'linux-headers-generic',
+    'mesa-utils',
   ]: }
 }
