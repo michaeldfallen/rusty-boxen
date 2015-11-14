@@ -17,6 +17,7 @@ class ubuntu::apps {
     'gconf-editor',
     'dconf-editor',
     'pulseaudio-equalizer',
+    'arc-theme',
   ]: }
 
   package { 'libgcrypt11':
