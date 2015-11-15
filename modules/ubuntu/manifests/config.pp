@@ -1,4 +1,4 @@
-class ubuntu::config($user = 'michael') {
+class ubuntu::config {
   ::ubuntu::gsettings { 'org.gnome.desktop.interface gtk-theme':
     value => 'Arc-Darker',
   }
