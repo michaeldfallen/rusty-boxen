@@ -12,5 +12,7 @@ class ubuntu::optimus {
   exec {[
     "/bin/sed -i 's/^Driver=$/Driver=nvidia/' /etc/bumblebee/bumblebee.conf",
     "/bin/sed -i 's/nvidia-current/nvidia-352/' /etc/bumblebee/bumblebee.conf",
-  ]: }
+  ]:
+    unless => 'grep "KernelDriver=nvidia-352" /etc/bumblebee/bumblebee.conf'
+  }
 }
