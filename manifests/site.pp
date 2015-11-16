@@ -4,7 +4,7 @@ Exec {
   group => 'adm',
   path  => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ]
 }
-Apt::Ppa<| |> -> Class['apt::update'] -> Package<| |>
+Class['apt::update'] -> Package<| |>
 
 node default {
   include ::zsh

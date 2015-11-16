@@ -10,5 +10,4 @@ class ubuntu {
   include ::ubuntu::apps
   include ::ubuntu::optimus
   include ::ubuntu::steam
-  include ::ubuntu::sources
 }

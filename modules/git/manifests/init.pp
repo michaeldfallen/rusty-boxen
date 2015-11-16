@@ -4,6 +4,9 @@ class git (
   $git_username = 'Michael Allen',
   $git_email = 'michael@michaelallen.io',
 ) {
+  apt::ppa { [
+    'ppa:git-core/ppa', # Git source
+  ]: }
   ensure_packages(['git'])
 
   exec { "/usr/bin/git config --global user.email '${git_email}'":
