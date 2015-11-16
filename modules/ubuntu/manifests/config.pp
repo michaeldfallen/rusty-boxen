@@ -33,4 +33,7 @@ class ubuntu::config {
   ::ubuntu::gsettings {
     'org.compiz.scale:/org/compiz/profiles/unity/plugins/scale/ overlay-icon': value => '1'
   }
+  ::ubuntu::gsettings {
+    'org.gnome.desktop.peripherals.mouse speed': value => '-0.55'
+  }
 }
