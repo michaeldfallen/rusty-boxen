@@ -13,4 +13,13 @@ class rusty_boxen {
     refreshonly => true,
     require     => File['/etc/init/boxen.conf'],
   }
+
+  exec { "/bin/sed -i 's/ errors=remount-ro/ discard,noatime,errors=remount-ro/' /etc/fstab":
+    unless => 'grep "discard,noatime,errors=remount-ro" /etc/fstab'
+  }
+
+  file { '/etc/udev/rules.d/60-schedulers.rules':
+    ensure => 'link',
+    target => '/opt/rusty-boxen/modules/rusty_boxen/files/schedulers.rules',
+  }
 }
