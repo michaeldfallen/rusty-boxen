@@ -10,6 +10,7 @@ class ubuntu::apps {
   }
 
   package { [
+    'xchat',
     'spotify-client',
     'google-chrome-stable',
     'caffeine',
