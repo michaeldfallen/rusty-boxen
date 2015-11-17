@@ -9,6 +9,11 @@ class libs::ruby {
   } ~> exec { 'chmod g+w /usr/local/rbenv/version':
     unless => '/usr/bin/test -w /usr/local/rbenv/version'
   }
+  rbenv::gem { [
+    'librarian-puppet'
+  ]:
+    ruby_version => '2.2.2',
+  }
 
   zsh::path { 'rbenv.zsh':
     content => 'export PATH="/usr/local/rbenv/bin:$PATH"',
