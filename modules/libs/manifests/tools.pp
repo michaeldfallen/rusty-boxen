@@ -1,4 +1,4 @@
-class libs::tools {
+class libs::tools ( $user = 'michael' ) {
   apt::ppa { [
     'ppa:webupd8team/atom',
   ]: }
@@ -16,6 +16,10 @@ class libs::tools {
     'vagrant-cachier',
     'vagrant-hostsupdater',
   ]: }
+  exec { "/usr/sbin/usermod -a -G docker $user":
+    unless  => "/usr/bin/groups $user | grep docker",
+    require => Package['docker.io'],
+  }
 }
 
 define vagrant_plugin ( $user = 'michael' ){
