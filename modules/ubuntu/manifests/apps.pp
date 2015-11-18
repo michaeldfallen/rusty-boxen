@@ -17,6 +17,7 @@ class ubuntu::apps {
     'gconf-editor',
     'dconf-editor',
     'pulseaudio-equalizer',
+    'indicator-multiload',
   ]: }
 
   package { 'libgcrypt11':

@@ -8,10 +8,13 @@ class libs::tools {
     'virtualbox-dkms',
     'atom',
     'nfs-kernel-server',
+    'docker.io',
+    'docker-compose',
   ]: }
   vagrant_plugin { [
     'vagrant-dns',
-    'vagrant-cachier'
+    'vagrant-cachier',
+    'vagrant-hostsupdater',
   ]: }
 }
 
