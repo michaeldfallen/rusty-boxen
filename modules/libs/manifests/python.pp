@@ -11,6 +11,9 @@ class libs::python ( $user = 'michael' ) {
     ensure => installed
   }
   pip3_package { [
+    'rope',
+    'pep8',
+    'flake8',
     'virtualenv',
     'virtualenvwrapper'
   ]: }
