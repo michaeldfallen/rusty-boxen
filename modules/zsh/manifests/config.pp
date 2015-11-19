@@ -2,6 +2,7 @@
 define zsh::config (
   $content = undef,
   $source = undef,
+  $target = undef,
   $file = $title,
   $owner = 'michael'
 ) {
@@ -11,6 +12,7 @@ define zsh::config (
     path    => "/home/${owner}/.zshrc.d/${file}",
     source  => $source,
     content => $content,
+    target  => $target,
     owner   => $owner,
     group   => $owner,
   }
