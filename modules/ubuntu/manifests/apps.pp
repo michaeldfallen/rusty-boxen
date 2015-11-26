@@ -11,6 +11,7 @@ class ubuntu::apps {
 
   package { [
     'xchat',
+    'gimp',
     'spotify-client',
     'google-chrome-stable',
     'caffeine',
