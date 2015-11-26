@@ -19,6 +19,11 @@ class ubuntu::apps {
     'dconf-editor',
     'pulseaudio-equalizer',
     'indicator-multiload',
+    'powertop',
+    'tlp',
+    'tlp-rdw',
+    'tp-smapi-dkms',
+    'acpi-call-dkms',
   ]: }
 
   package { 'libgcrypt11':
