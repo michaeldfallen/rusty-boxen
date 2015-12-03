@@ -11,4 +11,5 @@ class ubuntu {
   include ::ubuntu::optimus
   include ::ubuntu::steam
   include ::ubuntu::alsa
+  include ::ubuntu::background
 }
