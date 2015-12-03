@@ -15,4 +15,8 @@ class ubuntu::optimus {
   ]:
     unless => 'grep "KernelDriver=nvidia-352" /etc/bumblebee/bumblebee.conf'
   }
+  exec { 'make -f Makefile.dkms':
+    cwd => '/opt/rusty-boxen/modules/ubuntu/files/bbswitch',
+    unless => 'test -d /usr/src/bbswitch-0.8',
+  }
 }
