@@ -12,6 +12,7 @@ class ubuntu::apps {
   package { [
     'xchat',
     'gimp',
+    'dropbox',
     'spotify-client',
     'google-chrome-stable',
     'caffeine',
@@ -34,6 +35,15 @@ class ubuntu::apps {
   apt::ppa { [
     'ppa:nilarimogard/webupd8',
   ]: }
+
+  apt::source { 'dropbox':
+    location => 'http://linux.dropbox.com/ubuntu',
+    repos    => 'main',
+    key      => {
+      'id'     => '1C61A2656FB57B7E4DE0F4C1FC918B335044912E',
+      'server' => 'pgp.mit.edu',
+    },
+  }
 
   apt::source { 'spotify':
     location => 'http://repository.spotify.com',
