@@ -15,5 +15,10 @@ define zsh::config (
     target  => $target,
     owner   => $owner,
     group   => $owner,
+    require => [
+      File["/home/${owner}/.zshrc.d/path"],
+      File["/home/${owner}/.zshrc.d/completion"],
+      File["/home/${owner}/.zshrc.d/alias"],
+    ],
   }
 }

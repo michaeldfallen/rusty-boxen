@@ -41,16 +41,15 @@ class zsh (
       group  => $user,
     }
 
-    file { "/home/${user}/.zshrc.d/path":
+    file { [
+      "/home/${user}/.zshrc.d/path",
+      "/home/${user}/.zshrc.d/completion",
+      "/home/${user}/.zshrc.d/alias",
+    ]:
       ensure => 'directory',
       owner  => $user,
       group  => $user,
-    }
-
-    file { "/home/${user}/.zshrc.d/completion":
-      ensure => 'directory',
-      owner  => $user,
-      group  => $user,
+      require => File["/home/${user}/.zshrc.d"],
     }
   }
 }
