@@ -36,4 +36,7 @@ class ubuntu::config {
   ::ubuntu::gsettings {
     'org.gnome.desktop.peripherals.mouse speed': value => '-0.55'
   }
+  exec { '/bin/sed -i "s/^exit 0$/echo disable > \\/proc\\/acpi\\/ibm\\/bluetooth\nexit 0/" /etc/rc.local':
+    unless => 'grep "echo disable > /proc/acpi/ibm/bluetooth" /etc/rc.local',
+  }
 }
