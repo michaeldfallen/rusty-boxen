@@ -10,6 +10,7 @@ class libs::tools ( $user = 'michael' ) {
     'nfs-kernel-server',
     'docker.io',
     'docker-compose',
+    'ack-grep',
   ]: }
   vagrant_plugin { [
     'vagrant-dns',
