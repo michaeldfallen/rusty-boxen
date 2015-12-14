@@ -39,4 +39,8 @@ class ubuntu::config {
   exec { '/bin/sed -i "s/^exit 0$/echo disable > \\/proc\\/acpi\\/ibm\\/bluetooth\nexit 0/" /etc/rc.local':
     unless => 'grep "echo disable > /proc/acpi/ibm/bluetooth" /etc/rc.local',
   }
+  file { '/etc/lightdm/lightdm.conf':
+    ensure => link,
+    target => '/opt/rusty-boxen/modules/ubuntu/files/lightdm.conf',
+  }
 }
