@@ -21,6 +21,18 @@ class libs::tools ( $user = 'michael' ) {
     unless  => "/usr/bin/groups $user | grep docker",
     require => Package['docker.io'],
   }
+
+  class { 'archive::prerequisites':
+  } ->
+  class { 'idea::community':
+    version => '15.0.2',
+  } ->
+  file { "/home/${user}/.local/share/applications/intellij.desktop":
+    source => 'puppet:///modules/libs/intellij.desktop',
+    owner  => $user,
+    group  => $user,
+    mode   => 774,
+  }
 }
 
 define vagrant_plugin ( $user = 'michael' ){

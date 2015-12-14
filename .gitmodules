@@ -88,3 +88,9 @@
 [submodule "modules/ubuntu/files/bbswitch"]
 	path = modules/ubuntu/files/bbswitch
 	url = https://github.com/smunaut/bbswitch
+[submodule "vendor/idea"]
+	path = vendor/idea
+	url = https://github.com/gini/puppet-idea
+[submodule "vendor/archive"]
+	path = vendor/archive
+	url = https://github.com/gini/puppet-archive

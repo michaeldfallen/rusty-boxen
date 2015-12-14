@@ -4,5 +4,6 @@ class libs {
   include ::libs::python
   include ::libs::ruby
   include ::libs::node
+  include ::libs::java
   include ::libs::tools
 }
