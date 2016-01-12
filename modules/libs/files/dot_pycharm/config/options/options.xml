@@ -1,0 +1,18 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlDoctype.MigrateToHtml5" value="true" />
+    <property name="DefaultHtmlDoctype.Refreshed" value="2" />
+    <property name="PyCharm.InitialConfiguration" value="true" />
+    <property name="PyCharm.InitialConfiguration.V2" value="true" />
+    <property name="PyCharm.InitialConfiguration.V3" value="true" />
+    <property name="PyCharm.InitialConfiguration.V4" value="true" />
+    <property name="PyCharm.InitialConfiguration.V5" value="true" />
+    <property name="installation.uid" value="bcc61065-cbd5-47bb-8e39-3710980924e7" />
+    <property name="fileTypeChangedCounter" value="1" />
+    <property name="PyCharm.initialConfigurationShown" value="true" />
+    <property name="ignore.ibus.blocking.warn.message" value="true" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/Projects/livestax/lighthouse-prototype" />
+    <property name="toolwindow.stripes.buttons.info.shown" value="true" />
+    <property name="lastTip" value="1" />
+  </component>
+</application>

@@ -1,2 +1,3 @@
 modules/vim/files/vim/bundle/*
+modules/libs/files/dot_pycharm/system
 *.swp

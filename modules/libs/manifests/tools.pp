@@ -33,6 +33,7 @@ class libs::tools ( $user = 'michael' ) {
     group  => $user,
     mode   => 774,
   }
+  include ::libs::ide::pycharm
 }
 
 define vagrant_plugin ( $user = 'michael' ){

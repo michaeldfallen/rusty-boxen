@@ -1,0 +1,29 @@
+<application>
+  <component name="StatisticsApplicationUsages">
+    <group name="Git">
+      <project id="lighthouse-prototype" values="config.ssh.enabled,config.repo.sync.NOT_DECIDED,config.push.update.all.roots.enabled,config.update.type.BRANCH_DEFAULT,config.cherry-pick.autocommit.disabled,data.local.branches.count.1,config.warn.about.detached.enabled,config.push.autoupdate.disabled,data.remote.branches.count.1,data.remotes.in.project.1,config.force.push.enabled,config.save.policy.STASH,config.warn.about.crlf.enabled" collectionTime="1452466852515" />
+    </group>
+    <group name="vcs">
+      <project id="lighthouse-prototype" values="Git" collectionTime="1452466852502" />
+    </group>
+    <group name="file-type">
+      <project id="lighthouse-prototype" values="HTML,UNKNOWN,CSS,PLAIN_TEXT,XML,ReST,JSON,ARCHIVE,Images,Python,C++,JavaScript" collectionTime="1452466852506" />
+    </group>
+    <group name="module type">
+      <project id="lighthouse-prototype" values="PYTHON_MODULE" collectionTime="1452466852502" />
+    </group>
+  </component>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="ide.settings.Appearance" count="9" />
+      <entry feature="ide.settings.Code_Style" count="1" />
+      <entry feature="ide.settings.Colors_&amp;_Fonts" count="30" />
+      <entry feature="ide.settings.Console_Font" count="5" />
+      <entry feature="ide.settings.Font" count="20" />
+      <entry feature="ideaapp.started" count="8" />
+      <entry feature="welcome.screen.WelcomeScreen.Configure" count="2" />
+      <entry feature="welcome.screen.WelcomeScreen.OpenDirectoryProject" count="2" />
+      <entry feature="welcome.screen.WelcomeScreen.Settings" count="2" />
+    </counts>
+  </component>
+</application>
