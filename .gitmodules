@@ -4,6 +4,7 @@
 [submodule "modules/vim/files/vim/bundle/Command-T"]
 	path = modules/vim/files/vim/bundle/Command-T
 	url = git@github.com:michaeldfallen/Command-T.git
+	ignore = dirty
 [submodule "modules/vim/files/vim/bundle/vim-mustache-handlebars"]
 	path = modules/vim/files/vim/bundle/vim-mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars.git
@@ -25,6 +26,7 @@
 [submodule "modules/vim/files/vim/bundle/YouCompleteMe"]
 	path = modules/vim/files/vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+	ignore = dirty
 [submodule "modules/vim/files/vim/bundle/vim-snippets"]
 	path = modules/vim/files/vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
