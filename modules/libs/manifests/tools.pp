@@ -34,6 +34,7 @@ class libs::tools ( $user = 'michael' ) {
     mode   => 774,
   }
   include ::libs::ide::pycharm
+  include ::libs::tools::ansible
 }
 
 define vagrant_plugin ( $user = 'michael' ){
