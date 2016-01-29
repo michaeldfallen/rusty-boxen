@@ -25,6 +25,9 @@ class ubuntu::apps {
     'tlp-rdw',
     'tp-smapi-dkms',
     'acpi-call-dkms',
+    'byzanz',
+    'gtk-recordmydesktop',
+    'recordmydesktop',
   ]: }
 
   package { 'libgcrypt11':
