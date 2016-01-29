@@ -43,4 +43,6 @@ class git (
   } ~> zsh::path { 'git.zsh':
     content => 'fpath=(~/.zsh $fpath)'
   }
+
+  zsh::alias { 'prune-branches': cmd => 'git fetch -p && for branch in `git branch -vv | grep ": gone]" | awk "{print $1}"`; do git branch -D $branch; done' }
 }

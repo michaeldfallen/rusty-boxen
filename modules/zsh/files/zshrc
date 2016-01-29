@@ -10,6 +10,11 @@ for f in $HOME/.zshrc.d/*.zsh(^/N); do
   source $f
 done
 
+# Source all aliases files
+for f in $HOME/.zshrc.d/alias/*.zsh(^/N); do
+  source $f
+done
+
 # Initialize autocompletion
 autoload -U compinit
 compinit
