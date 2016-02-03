@@ -36,6 +36,10 @@ class ubuntu::config {
   ::ubuntu::gsettings {
     'org.gnome.desktop.peripherals.mouse speed': value => '-0.55'
   }
+  ::ubuntu::gsettings {
+    'org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ alt-tab-bias-viewport':
+      value => 'false'
+  }
   exec { '/bin/sed -i "s/^exit 0$/echo disable > \\/proc\\/acpi\\/ibm\\/bluetooth\nexit 0/" /etc/rc.local':
     unless => 'grep "echo disable > /proc/acpi/ibm/bluetooth" /etc/rc.local',
   }
