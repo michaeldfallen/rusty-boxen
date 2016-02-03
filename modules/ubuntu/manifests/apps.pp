@@ -10,6 +10,7 @@ class ubuntu::apps {
   }
 
   package { [
+    'vlc',
     'xchat',
     'gimp',
     'dropbox',

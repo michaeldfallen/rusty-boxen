@@ -43,4 +43,8 @@ class ubuntu::config {
     ensure => link,
     target => '/opt/rusty-boxen/modules/ubuntu/files/lightdm.conf',
   }
+  file { '/home/michael/.local/share/mimeapps.list':
+    ensure => link,
+    target => '/opt/rusty-boxen/modules/ubuntu/files/app_defaults.conf',
+  }
 }
