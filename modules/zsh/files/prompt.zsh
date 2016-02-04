@@ -9,7 +9,7 @@ ret_status() {
 }
 
 git_radar() {
-  USE_DEV_RADAR="${USE_DEV_RADAR:-"false"}"
+  USE_DEV_RADAR="${USE_DEV_RADAR:-"true"}"
   if [[ $USE_DEV_RADAR == "true" ]]; then
     ~/Projects/personal/git-radar/git-radar --zsh --fetch
   else
@@ -17,7 +17,11 @@ git_radar() {
   fi
 }
 
-export PROMPT=$'$(ret_status)$(directory_name) '
+powerline_branch="$(printf '\ue0a0')"
+export GIT_RADAR_MASTER_SYMBOL="%{$fg_bold[black]%}$powerline_branch%{$reset_color%}"
+export GIT_RADAR_FORMAT="%{ :remote}%{ :branch}%{ :local}%{ :stash}%{ :changes}"
+
+export PROMPT=$'$(ret_status)$(directory_name)$(git_radar) '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
