@@ -11,6 +11,7 @@ class libs::tools ( $user = 'michael' ) {
     'docker.io',
     'docker-compose',
     'ack-grep',
+    'colordiff',
   ]: }
   vagrant_plugin { [
     'vagrant-dns',
@@ -35,6 +36,7 @@ class libs::tools ( $user = 'michael' ) {
   }
   include ::libs::ide::pycharm
   include ::libs::tools::ansible
+  include ::libs::tools::terraform
 }
 
 define vagrant_plugin ( $user = 'michael' ){
