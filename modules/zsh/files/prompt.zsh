@@ -18,7 +18,8 @@ git_radar() {
 }
 
 powerline_branch="$(printf '\ue0a0')"
-export GIT_RADAR_MASTER_SYMBOL="%{$fg_bold[black]%}$powerline_branch%{$reset_color%}"
+export GIT_RADAR_MASTER_SYMBOL="%{$fg_bold[blue]%}$powerline_branch%{$reset_color%}"
+export GIT_RADAR_COLOR_BRANCH="$fg[white]"
 export GIT_RADAR_FORMAT="%{ :remote}%{ :branch}%{ :local}%{ :stash}%{ :changes}"
 
 export PROMPT=$'$(ret_status)$(directory_name)$(git_radar) '
