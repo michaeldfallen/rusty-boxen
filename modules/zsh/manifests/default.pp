@@ -3,15 +3,15 @@ class zsh::default {
   require ::zsh
 
   zsh::config { 'basic_opts.zsh':
-    source => 'puppet:///modules/zsh/basic_opts.zsh',
+    target => '/opt/rusty-boxen/modules/zsh/files/basic_opts.zsh',
   }
 
   zsh::config { 'prompt.zsh':
-    source => 'puppet:///modules/zsh/prompt.zsh',
+    target => '/opt/rusty-boxen/modules/zsh/files/prompt.zsh',
   }
 
   zsh::config { 'window.zsh':
-    source => 'puppet:///modules/zsh/window.zsh',
+    target => '/opt/rusty-boxen/modules/zsh/files/window.zsh',
   }
 
   zsh::completion { 'case-insensitive.zsh':
