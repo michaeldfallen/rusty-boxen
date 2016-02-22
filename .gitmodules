@@ -102,3 +102,6 @@
 [submodule "modules/vim/files/vim/bundle/ansible-vim"]
 	path = modules/vim/files/vim/bundle/ansible-vim
 	url = https://github.com/pearofducks/ansible-vim.git
+[submodule "modules/vim/files/vim/bundle/vim-terraform"]
+	path = modules/vim/files/vim/bundle/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
