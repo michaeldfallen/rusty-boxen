@@ -99,3 +99,6 @@
 [submodule "modules/vim/files/vim/bundle/vim-jinja"]
 	path = modules/vim/files/vim/bundle/vim-jinja
 	url = https://github.com/mitsuhiko/vim-jinja.git
+[submodule "modules/vim/files/vim/bundle/ansible-vim"]
+	path = modules/vim/files/vim/bundle/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim.git
