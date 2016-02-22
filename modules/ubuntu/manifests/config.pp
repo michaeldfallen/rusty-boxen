@@ -51,4 +51,7 @@ class ubuntu::config {
     ensure => link,
     target => '/opt/rusty-boxen/modules/ubuntu/files/app_defaults.conf',
   }
+  ::ubuntu::gsettings {
+    'org.gnome.desktop.input-sources xkb-options': value => "['caps:escape']",
+  }
 }
