@@ -137,6 +137,7 @@ cnoreabbrev <expr> ack ((getcmdtype() is# ':' && getcmdline() is# 'ack')?('Ack')
 
 " Custom file types
 au BufNewFile,BufRead *.zsh set filetype=sh
+au BufNewFile,BufRead *.j2 set ft=jinja
 
 " Custom button mappings
 "   open NerdTree
