@@ -3,6 +3,6 @@ define zsh::alias (
 ) {
   zsh::config { "${title} alias to ${cmd}":
     file => "alias/${title}.zsh",
-    content => "alias ${title}='${cmd}'"
+    content => "alias ${title}=$'${cmd}'"
   }
 }
