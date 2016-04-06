@@ -37,6 +37,7 @@ class libs::tools ( $user = 'michael' ) {
   include ::libs::ide::pycharm
   include ::libs::tools::ansible
   include ::libs::tools::terraform
+  include ::libs::tools::phantomjs
 }
 
 define vagrant_plugin ( $user = 'michael' ){
