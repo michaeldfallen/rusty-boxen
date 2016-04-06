@@ -30,8 +30,8 @@ class libs::python ( $user = 'michael' ) {
   }
 }
 define pip3_package () {
-  exec { "pip3 install $name":
-    unless => "pip3 list | grep $name",
+  exec { "/usr/local/bin/pip3 install $name":
+    unless => "/usr/local/bin/pip3 list | grep $name",
     require => Package['python3-pip']
   }
 }
