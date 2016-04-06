@@ -60,10 +60,11 @@ class ubuntu::apps {
   }
 
   apt::source { 'google-chrome':
-    location => 'http://dl.google.com/linux/chrome/deb/',
-    release  => 'stable',
-    repos    => 'main',
-    key      => {
+    location     => 'http://dl.google.com/linux/chrome/deb/',
+    release      => 'stable',
+    repos        => 'main',
+    architecture => 'amd64',
+    key          => {
       'id'     => '4CCA1EAF950CEE4AB83976DCA040830F7FAC5991',
       'source' => 'https://dl-ssl.google.com/linux/linux_signing_key.pub',
     },
