@@ -36,6 +36,9 @@ set title
 " Ignore files by default (used by CommandT, YouCompleteMe, etc)
 set wildignore+=*.class,**/target/**,**/bin/**,_site/**
 
+" Keep five lines visible when scrolling, for context
+set scrolloff=5
+
 " Hide gvim/macvims scrollbars and the Toolbar
 set guioptions-=T
 set guioptions-=r
