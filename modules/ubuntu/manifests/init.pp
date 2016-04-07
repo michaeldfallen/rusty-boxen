@@ -8,7 +8,9 @@ class ubuntu {
 
   include ::ubuntu::config
   include ::ubuntu::apps
-  include ::ubuntu::optimus
+  if str2bool("$has_optimus") {
+    include ::ubuntu::optimus
+  }
   include ::ubuntu::steam
   include ::ubuntu::alsa
   include ::ubuntu::background
