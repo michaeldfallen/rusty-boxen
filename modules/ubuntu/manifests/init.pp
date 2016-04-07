@@ -12,6 +12,8 @@ class ubuntu {
     include ::ubuntu::optimus
   }
   include ::ubuntu::steam
-  include ::ubuntu::alsa
+  if str2bool("$has_alsa_audio_bug") {
+    include ::ubuntu::alsa
+  }
   include ::ubuntu::background
 }
