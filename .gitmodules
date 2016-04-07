@@ -89,7 +89,7 @@
 	url = https://github.com/puppet-community/puppet-nodejs
 [submodule "modules/ubuntu/files/bbswitch"]
 	path = modules/ubuntu/files/bbswitch
-	url = https://github.com/smunaut/bbswitch
+	url = https://github.com/michaeldfallen/bbswitch
 [submodule "vendor/idea"]
 	path = vendor/idea
 	url = https://github.com/gini/puppet-idea
