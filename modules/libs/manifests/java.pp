@@ -7,13 +7,19 @@ class libs::java (
     provider => git,
     user     => $user,
   }
-  package { ['openjdk-8-jdk']: }
+  package { ['maven']: }
+  java { 'openjdk-8-jdk': }
 }
-define jenv_version (
-  $jenv_binary = '/usr/local/jenv/bin/jenv',
+define java (
+  $jenv_binary = "/home/michael/.jenv/bin/jenv",
+  $path = "/usr/lib/jvm/${name}-amd64",
 ) {
-  exec { "$jenv_binary add $name":
+  exec { "jenv_installed":
+    command => '/bin/true',
+    onlyif => "/usr/bin/test -e ${jenv_binary}",
+  }
+  exec { "$jenv_binary add $path":
     unless => "$jenv_binary list | grep $name",
-    require => File[$jenv_binary],
+    require => Exec["jenv_installed"],
   }
 }
