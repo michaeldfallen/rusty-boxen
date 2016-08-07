@@ -127,6 +127,8 @@ let g:syntastic_python_checkers = ['flake8', 'python']
 
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
+let g:syntastic_javascript_checkers = ['eslint']
+
 let g:syntastic_filetype_map = { 'html.mustache': 'mustache' }
 
 let g:syntastic_sass_sass_args = '--load-path "~/Projects/land-registry/govuk_frontend_toolkit/stylesheets"'
@@ -176,3 +178,4 @@ noremap <C-l> <C-W>l
 
 " Map <Leader>+o (for outline) to open tagbar
 nmap \o :TagbarToggle<CR>
+filetype plugin indent on
