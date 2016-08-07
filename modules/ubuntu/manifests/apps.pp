@@ -20,6 +20,7 @@ class ubuntu::apps {
     'byzanz',
     'gtk-recordmydesktop',
     'recordmydesktop',
+    'network-manager-openvpn',
   ]: }
 
   package { 'libgcrypt11':
