@@ -1,6 +1,7 @@
 class libs::tools::vagrant (
   $user = 'michael',
-  $version = '1.8.4'
+  $version = '1.8.4',
+  $digest = 'fd38d8e00e494a617201facb42fc2cac627e5021db15e91c2a041eac6a2d8208',
 ) {
   require ::libs::tools::virtualbox
 
@@ -8,7 +9,7 @@ class libs::tools::vagrant (
     url             => "https://releases.hashicorp.com/vagrant/${version}/vagrant_${version}_x86_64.deb",
     src_target      => '/tmp',
     digest_type     => 'sha256',
-    digest_string   => 'fd38d8e00e494a617201facb42fc2cac627e5021db15e91c2a041eac6a2d8208',
+    digest_string   => "${digest}",
     allow_redirects => true,
   }
   package { 'vagrant':

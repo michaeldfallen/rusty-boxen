@@ -1,19 +1,19 @@
 class libs::tools::virtualbox (
-  $version = '5.0.24',
-  $build = '108355',
+  $version = '5.0.26',
+  $build = '108824',
+  $digest = '8fe330e675233249771fe8e2aa7421ac1f12af3038bd742f69ac16830d64b889',
 ) {
-  archive::download { "virtualbox.deb":
+  archive::download { "virtualbox-${version}.deb":
     url             => "http://download.virtualbox.org/virtualbox/${version}/virtualbox-5.0_${version}-${build}~Ubuntu~wily_amd64.deb",
     src_target      => '/tmp',
     digest_type     => 'sha256',
-    digest_string   => '9a4a29a5208ee434a21e84dbd2d834923b3b5a9489a37d515f4c05ec9fad4869',
+    digest_string   => "${digest}",
     allow_redirects => true,
   }
-  package { 'virtualbox':
+  package { "virtualbox-${version}":
     provider => 'dpkg',
-    source   => "/tmp/virtualbox.deb",
+    source   => "/tmp/virtualbox-${version}.deb",
     ensure   => 'latest',
-    require  => Archive::Download['virtualbox.deb'],
+    require  => Archive::Download["virtualbox-${version}.deb"],
   }
-  package { 'virtualbox-dkms': }
 }
