@@ -1,14 +1,5 @@
 # Install apps
 class ubuntu::apps {
-  package { 'plaidchat':
-    provider => 'npm',
-    require => Package['nodejs']
-  }
-  file { '/usr/share/applications/slack.desktop':
-    ensure => link,
-    target => '/opt/rusty-boxen/modules/ubuntu/files/slack.desktop',
-  }
-
   package { [
     'vlc',
     'xchat',
