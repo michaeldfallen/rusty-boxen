@@ -105,3 +105,12 @@
 [submodule "modules/vim/files/vim/bundle/vim-terraform"]
 	path = modules/vim/files/vim/bundle/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "modules/vim/files/vim/bundle/vimroom"]
+	path = modules/vim/files/vim/bundle/vimroom
+	url = https://github.com/mikewest/vimroom
+[submodule "modules/vim/files/vim/bundle/vimoutliner"]
+	path = modules/vim/files/vim/bundle/vimoutliner
+	url = https://github.com/vimoutliner/vimoutliner.git
+[submodule "modules/vim/files/vim/bundle/vim-lexical"]
+	path = modules/vim/files/vim/bundle/vim-lexical
+	url = https://github.com/reedes/vim-lexical
