@@ -4,9 +4,9 @@ class libs::python ( $user = 'michael' ) {
     'python-dev',
     'python3-dev',
     'python2.7',
+    'python3.5',
     'python-pip',
     'python3-pip',
-    'python3.5',
   ]:
     ensure => installed
   }
