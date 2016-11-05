@@ -1,6 +1,6 @@
 class libs::tools::terraform (
-  $version = '0.6.11',
-  $arch    = 'amd64'
+  $version = '0.7.8',
+  $arch    = 'amd64',
 ) {
   require ::archive::prerequisites
 
@@ -14,7 +14,7 @@ class libs::tools::terraform (
     extension     => $extension,
     target        => '/opt',
     root_dir      => 'terraform',
-    digest_string => 'f451411db521fc4d22c9fe0c80105cf028eb8df0639bac7c1e781880353d9a5f',
+    digest_string => 'b3394910c6a1069882f39ad590eead0414d34d5bd73d4d47fa44e66f53454b5a',
     digest_type   => 'sha256',
   }
   ::zsh::path { 'terraform.zsh':
