@@ -6,8 +6,16 @@ class ubuntu {
     },
   }
 
-  include ::ubuntu::config
+  ::ubuntu::gsettings {
+    'org.gnome.desktop.input-sources xkb-options': value => "['caps:escape']",
+  }
+
+  include ::ubuntu::theme
   include ::ubuntu::apps
+
+  if str2bool("$is_unity") {
+    include ::ubuntu::config
+  }
   if str2bool("$has_optimus") {
     include ::ubuntu::optimus
   }

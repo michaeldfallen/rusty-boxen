@@ -62,4 +62,9 @@ class ubuntu::apps {
     },
   }
   ::ubuntu::autostart { 'caffeine-indicator': }
+
+  file { '/home/michael/.local/share/mimeapps.list':
+    ensure => link,
+    target => '/opt/rusty-boxen/modules/ubuntu/files/app_defaults.conf',
+  }
 }
