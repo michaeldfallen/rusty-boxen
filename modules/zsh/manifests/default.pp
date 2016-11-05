@@ -17,4 +17,6 @@ class zsh::default {
   zsh::completion { 'case-insensitive.zsh':
     content => "zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'"
   }
+
+  zsh::alias { 'ls': cmd => 'ls --color' }
 }
